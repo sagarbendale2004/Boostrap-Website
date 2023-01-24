@@ -16,13 +16,17 @@
             font-size: 2.1rem;
             opacity: 4;
         }
+
+        .card {
+            width: 400px;
+        }
     </style>
 </head>
 
 <body>
     <!-- navbar code starts -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">HackerMan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -44,27 +48,123 @@
                             Services
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#services">Html codes</a></li>
-                            <li><a class="dropdown-item" href="#services">Java codes</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#services">Java Course</a></li>
+                            <li><a class="dropdown-item" href="#services">Computer Basics</a></li>
+                            <li><a class="dropdown-item" href="#services">Computer Networks</a></li>
+                            <li><a class="dropdown-item" href="#services">Artificial Intelligence</a></li>
+                            <li><a class="dropdown-item" href="#services">Basics of Coding</a></li>
+                            <li><a class="dropdown-item" href="#services">Computer Fundamental</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact us</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <div class="d-flex align-items-end px-4">
+                    <button type="button" class="btn btn-outline-light mx-3 px-4" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                    <button type="button" class="btn btn-outline-light px-4" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- navbar code ends -->
+
+    <!-- login modal-->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Login now</button>
+                        <p class="mt-5 mb-3 text-muted">© 2022–2023</p>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" id="floatingInput"
+                                placeholder="Enter your Full Name">
+                            <label for="floatingInput">Enter Your Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Enter Your Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">Create Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">Confirm Password</label>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                        <hr class="my-4">
+                        <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                            <a href="https://www.twitter.com"
+                                style="text-decoration: none; color: rgb(142, 142, 142);">Sign up with Twitter</a>
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            <a href="https://www.facebook.com" style="text-decoration: none;">Sign up with Facebook</a>
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#github"></use>
+                            </svg>
+                            <a href="https://www.github.com"
+                                style="text-decoration: none; color: rgb(142, 142, 142);">Sign up with Github</a>
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- crousel code starts -->
 
@@ -143,43 +243,140 @@
             <h1 class="display-5">Our services</h1>
             <hr class="w-25 mx-auto" />
         </div>
+        <div class="container">
 
-        <div class="container my-5">
-            <div class="row mb-2">
-                <div class="col-md-6">
-                    <div
-                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-primary">World</strong>
-                            <h3 class="mb-0">HTML Codes</h3>
-                            <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
-                                lead-in to additional content.</p>
-                            <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                        <div class="col-auto">
-                            <img class="bd-placeholder-img" src="fifth.jpg" alt="images" width="200" height="250">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="sixth.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em" class="px-3 py-2">Java Course</text>
+                        </img>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div
-                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-success">Design</strong>
-                            <h3 class="mb-0">JAVA Codes</h3>
-                            <div class="mb-1 text-muted">Nov 11</div>
-                            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
-                                additional content.</p>
-                            <a href="#" class="stretched-link">Continue reading</a>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="first.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em" class="px-3 py-2">Computer Basics</text>
+                        </img>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
                         </div>
-                        <div class="col-auto">
-                            <img class="bd-placeholder-img" src="fifth.jpg" alt="images" width="200" height="250">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="third.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em" class="px-3 py-2">Computer Network</text>
+                        </img>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="fourth.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em" class="px-3 py-2">Artificial Intelligence</text>
+                        </img>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="second.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em" class="px-3 py-2">Basics of Coding</text>
+                        </img>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="fifth.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em" class="px-3 py-2">Computer Fundamental</text>
+                        </img>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </section><br>
 
     <!-- services section ends -->
@@ -246,11 +443,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="validationTextarea" class="form-label">Your Query</label>
-                    <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                    <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea"
+                        required></textarea>
                     <div class="invalid-feedback">
-                      Please enter a message in the textarea.
+                        Please enter a message in the textarea.
                     </div>
-                  </div>
+                </div>
                 <div class="col-12">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -265,7 +463,7 @@
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Submit form</button>
                 </div>
-                
+
             </form>
         </div>
     </section><br>
@@ -277,11 +475,11 @@
     <div class="container">
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link px-2 text-muted">Contact Us</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link px-2 text-muted">Services</a></li>
+                <li class="nav-item"><a href="#navbar" class="nav-link px-2 text-muted">signup</a></li>
             </ul>
             <p class="text-center text-muted">© 2023 Company, Inc</p>
         </footer>
@@ -295,6 +493,7 @@
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
     </script>
 
 </body>
